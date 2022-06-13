@@ -1,0 +1,47 @@
+html { height: 100%; }
+
+body { min-height: 100%; }
+
+.left{
+    background-color: #2b5682;
+    color: white;
+}
+.leftContainer{
+    padding: 0;
+}
+
+.right{
+    background-color: lightblue;
+}
+
+.navbarTab{
+    min-height: 63px;
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#adminLogo{
+    height: 40px;
+    border-radius: 50%;
+}
+
+#adminPhoto{
+    height: 65px;
+    border-radius: 50%;
+}
+
+.navbarLogos{
+    height: 33px;
+}
+
+.navbarTabTitle{
+    min-height: 65px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarTabTitle:hover .navbarTab:hover{
+    background-color: #122d47;
+}
