@@ -2,37 +2,14 @@ html { height: 100%; }
 
 body { min-height: 100%; }
 
-.left{
-    background-color: #2b5682;
-    color: white;
-}
 .leftContainer{
     padding: 0;
-}
-
-.right{
-    background-color: lightblue;
 }
 
 .navbarTab{
     min-height: 63px;
     display:flex;
     align-items: center;
-    /* justify-content: center; */
-}
-
-#adminLogo{
-    height: 40px;
-    border-radius: 50%;
-}
-
-#adminPhoto{
-    height: 65px;
-    border-radius: 50%;
-}
-
-.navbarLogos{
-    height: 33px;
 }
 
 .navbarTabTitle{
@@ -42,6 +19,35 @@ body { min-height: 100%; }
     justify-content: center;
 }
 
-.navbarTabTitle:hover .navbarTab:hover{
+/* background color */
+.left{
+    background-color: #2b5682;
+    color: white;
+}
+
+.right{
+    background-color: lightblue;
+}
+
+.navbarTab:hover{
     background-color: #122d47;
 }
+
+/* images */
+#adminLogo{
+    height: 40px;
+    border-radius: 50%;
+}
+
+#adminPhoto{
+    height: 65px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.navbarLogos{
+    height: 20px;
+    margin: 12px;
+}
+
