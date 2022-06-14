@@ -33,6 +33,10 @@ body { min-height: 100%; }
     background-color: #122d47;
 }
 
+.navbarTab:active, .navbarTab:focus{
+    background-color: #0c1d2e;
+}
+
 /* images */
 #adminLogo{
     height: 40px;
