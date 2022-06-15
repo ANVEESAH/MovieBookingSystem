@@ -16,4 +16,4 @@ import { ErrorComponent } from './error/error.component';
     UserRoutingModule
   ]
 })
-export class UserModule { }
+export class UserModule {}
