@@ -10,7 +10,8 @@ const routing:Routes=[
 ]
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routing)
