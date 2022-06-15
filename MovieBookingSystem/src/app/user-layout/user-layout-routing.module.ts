@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {path:'header',component: HeaderComponent},
-  {path:'',component: HeaderComponent},
+  // {path:'',component: ErrorComponent},
   {path:'content',component: ContentComponent},
   {path:'error',component: ErrorComponent},
   {path:'**',component: ErrorComponent
