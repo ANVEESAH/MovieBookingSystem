@@ -8,18 +8,19 @@ import { MovieTimingsComponent } from '../admin/movie-timings/movie-timings.comp
 import { MoviesComponent } from '../admin/movies/movies.component';
 import { UpdatePasswordComponent } from '../admin/update-password/update-password.component';
 import { UsersComponent } from '../admin/users/users.component';
+import { ErrorComponent } from './error/error.component';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {path:"layout", component:LayoutComponent},
-  
-  {path:"", component:DashboardComponent},
+  {path:"dashboard", component:DashboardComponent},
   {path:"movie-theatres", component:MovieTheatresComponent},
   {path:"movies", component:MoviesComponent},
   {path:"movie-timings", component:MovieTimingsComponent},
   {path:"home-page", component:HomePageComponent},
   {path:"users", component:UsersComponent},
   {path:"booking", component:BookingComponent},
-  {path:"update-password", component:UpdatePasswordComponent}
+  {path:"update-password", component:UpdatePasswordComponent},
+  {path:"", redirectTo:"dashboard", pathMatch:"full"}
 ];
 export { routes }
