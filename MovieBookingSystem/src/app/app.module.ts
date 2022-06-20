@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { AddshowwComponent } from './admin/movie-timings/addshoww/addshoww.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    AddshowwComponent,
-    
+    AddshowwComponent
   ],
   imports: [
     BrowserModule,
