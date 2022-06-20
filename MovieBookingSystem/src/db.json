@@ -1,0 +1,21 @@
+{
+    "admin": [
+        {
+            "movie-theatres": [
+                {
+                    "id": 1,
+                    "theatreName": "PVR"
+                },
+                {
+                    "id": 2,
+                    "theatreName": "Movie World"
+                },
+                {
+                    "id": 1,
+                    "theatreName": "Complex"
+                }
+            ]
+        }
+    ],
+    "user": []
+}
