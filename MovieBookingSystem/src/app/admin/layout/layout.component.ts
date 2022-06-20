@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  adminName = "Prakhar Pratap Singh"
   constructor() { }
 
-  ngOnInit(): void {
-  }
+
+  ngOnInit(): void { }
 
 }
