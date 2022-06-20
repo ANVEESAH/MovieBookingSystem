@@ -12,7 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {path:"layout", component:LayoutComponent},
-  
+  {path:"dashboard", component:DashboardComponent},
   {path:"", component:DashboardComponent},
   {path:"movie-theatres", component:MovieTheatresComponent},
   {path:"movies", component:MoviesComponent},
