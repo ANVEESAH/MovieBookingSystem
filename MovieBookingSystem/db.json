@@ -1,0 +1,18 @@
+{
+  "movie-theatres": [
+    {
+      "id": 1,
+      "theatreName": "PVR",
+      "theatreImage":
+    },
+    {
+      "id": 2,
+      "theatreName": "Movie World"
+    },
+    {
+      "id": 1,
+      "theatreName": "Complex"
+    }
+  ],
+  "user": []
+}

@@ -1,0 +1,23 @@
+/* middle row */
+.thead-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+.middleRow {
+    height: 430px;
+    float: top;
+    overflow-y: auto;
+}
+
+/* bottom row */
+button {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.bottomButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 0;
+}
