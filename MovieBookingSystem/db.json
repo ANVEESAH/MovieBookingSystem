@@ -1,17 +1,20 @@
 {
   "movie-theatres": [
     {
-      "id": 1,
-      "theatreName": "PVR",
-      "theatreImage":
+      "theatreName": "Carnival Cinemas",
+      "id": 2
     },
     {
-      "id": 2,
-      "theatreName": "Movie World"
+      "theatreName": "Dharam Palace Mall",
+      "id": 3
     },
     {
-      "id": 1,
-      "theatreName": "Complex"
+      "id": "1",
+      "theatreName": "PVR"
+    },
+    {
+      "id": 4,
+      "theatreName": "SRS Cinema"
     }
   ],
   "user": []

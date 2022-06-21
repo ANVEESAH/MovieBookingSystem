@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NgZone } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MovieTheatresService } from 'src/app/adminServices/movie-theatres.service';
 
 @Component({
@@ -10,14 +10,38 @@ import { MovieTheatresService } from 'src/app/adminServices/movie-theatres.servi
 })
 export class MovieTheatresComponent implements OnInit {
   dataArray: any[] = [];
-  // constructor(private router: Router, public zone: NgZone) { }
+  // products:Product[] = [];
   constructor(private _movieTheatresService: MovieTheatresService) { }
 
   ngOnInit(): void {
-    // this.zone.run(() => { this.router.navigate(['edit-theatre']); });
     this._movieTheatresService.GetAllMovieTheatres().subscribe(
       (data) => { this.dataArray = data }
     );
+    // this.products=this.productService.getProducts();
   }
 
+  deleteFunc(id: any) {
+    this._movieTheatresService.deleteATheatre(id).subscribe(
+      (data) => {
+        this.dataArray.pop();
+      }
+    );
+  }
+
+  addTheatreForm = new FormGroup(
+    {
+      id: new FormControl(),
+      theatreName: new FormControl()
+    }
+  )
+
+  addTheatreFunc() {
+    if (this.addTheatreForm.valid) {
+      this._movieTheatresService.addMovieTheatre(this.addTheatreForm.value).subscribe(
+        (data)=>{
+          this.dataArray.push(this.addTheatreForm.value);
+        }
+      );
+    }
+  }
 }

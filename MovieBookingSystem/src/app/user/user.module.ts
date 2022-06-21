@@ -12,12 +12,12 @@ import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
-    ContentComponent,
-    ErrorComponent,
-    BookTicketComponent,
-    HomeComponent,
-    StepperComponent,
-    SigninComponent
+    // ContentComponent,
+    // ErrorComponent,
+    // BookTicketComponent,
+    // HomeComponent,
+    // StepperComponent,
+    // SigninComponent
   ],
   imports: [
     CommonModule,
