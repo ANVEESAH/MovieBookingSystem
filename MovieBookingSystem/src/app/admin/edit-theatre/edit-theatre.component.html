@@ -11,19 +11,19 @@
             </div>
         </div>
     </div>
-    <form action="">
+    <form [formGroup]="newTheatreDataForm" (ngSubmit)="submitNewTheatreDataFunc()">
         <div class="row">
             <div class="col-6">
                 <div class="row">
                     <div class="col-12">
                         Old Theatre Name:
-                        <input class="form-control" type="text" value="" disabled />
+                        <input class="form-control" type="text" [value]="data.theatreName" disabled />
                         <p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        [Image]
+                        <img src="" alt="[Theatre Image]"/>
                         <p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-12">
                         Theatre Name:
-                        <input class="form-control" type="text" value="" />
+                        <input class="form-control" type="text" formControlName = "theatreName" />
                         <p>
                     </div>
                 </div>
@@ -48,7 +48,8 @@
         </div>
         <div class="row">
             <div class="col-12" id="submit">
-                <input type="submit" class="btn btn-danger" value="Edit theatre" />
+                <!-- <button type="submit" class="btn btn-danger" routerLink="/admin/movie-theatres">Edit theatre</button> -->
+                <button type="submit" class="btn btn-danger">Edit theatre</button>
                 <p>
             </div>
         </div>

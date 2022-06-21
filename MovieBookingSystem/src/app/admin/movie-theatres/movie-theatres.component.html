@@ -1,67 +1,59 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12 navbar navbar-black">
-            <div class="navbar-brand">
-                <strong>
-                    <h1>Theatre List</h1>
-                </strong>
-            </div>
-            <div class="d-flex">
-                <a class="navbar-brand">Admin > Theatre List</a>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 navbar navbar-black">
+      <div class="navbar-brand">
+        <strong>
+          <h1>Theatre List</h1>
+        </strong>
+      </div>
+      <div class="d-flex">
+        <a class="navbar-brand">Admin > Theatre List</a>
+      </div>
     </div>
-    <div class="row middleRow">
-        <div class="col-12">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Theatre Name</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Delete</th>
-                    <th scope="col">Modify</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let data of dataArray" >
-                    <th scope="row">{{data.id}}</th>
-                    <td>{{data.theatreName}}</td>
-                    <td>{{data.lastName}}</td>
-                    <td>{{data.phoneNumber}}</td>
-                    <td>{{data.emailAddress}}</td>
-                    <td><button (click)="deleteFunc(data.id)">Delete</button></td>
-                  </tr>
-                </tbody>
-              </table>
-            <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">S.No.</th>
-                    <th scope="col">Theatre Name</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Delete</th>
-                    <th scope="col">Modify</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>PVR</td>
-                    <td>[image]</td>
-                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                    <!-- <td><a routerLink="/admin/edit-theatre">Edit</a></td> -->
-                    <!-- <td><a routerLink="edit-theatre">Edit</a></td> -->
-                    <td><button type="button" class="btn btn-info" routerLink="/admin/edit-theatre/">Edit</button></td>
-                </tbody>
-              </table>
-        </div>
+  </div>
+  <div class="row middleRow">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Theatre Name</th>
+            <th scope="col">Image</th>
+            <!-- <th scope="col">Delete</th> -->
+            <th scope="col">Modify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataArray">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.theatreName}}</td>
+            <td>{{data.image}}</td>
+            <!-- <td><input class="form-check-input" type="checkbox" id="flexCheckDefault"></td> -->
+            <td>
+              <button type="button" class="btn btn-info" [routerLink]="['/admin/edit-theatre', data.id]">Edit</button>
+              <button (click)="deleteFunc(data.id)" type="button" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div class="row">
-        <div class="col-12 bottomButtons">
-            <button type="button" class="btn btn-success">Add new theatre</button>
-            <button type="button" class="btn btn-danger">Delete selected theatres</button>
-        </div>
-    </div>
+  </div>
+  <div class="row">
+    <form class="addTheatreForm" [formGroup]="addTheatreForm" (ngSubmit)="addTheatreFunc()">
+      <div class="col-3 addTheatreBorder">
+        <input class="form-control" type="text" placeholder="ID" formControlName="id" />
+      </div>
+      <div class="col-3 addTheatreBorder">
+        <input class="form-control" type="text" placeholder="Theatre Name" formControlName="theatreName" />
+      </div>
+      <div class="col-3 addTheatreBorder">
+        <input class="form-control" type="text" placeholder="image" formControlName="theatreImage" />
+      </div>
+      <!-- <input class="form-check-input" type="checkbox" id="flexCheckDefault"> -->
+      <div class="col-3 addTheatreBorder">
+        <button type="submit" class="btn btn-success addTheatreButton">Add New Theatre</button>
+      </div>
+    </form>
+  </div>
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

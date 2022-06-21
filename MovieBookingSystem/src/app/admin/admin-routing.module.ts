@@ -1,17 +1,3 @@
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-// import { EditTheatreComponent } from './edit-theatre/edit-theatre.component';
-
-// const routes: Routes = [
-//   {path:"edit-theatre", component:EditTheatreComponent}
-// ];
-
-// @NgModule({
-//   imports: [RouterModule.forChild(routes)],
-//   exports: [RouterModule]
-// })
-// export class AdminRoutingModule { }
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './booking/booking.component';
@@ -28,16 +14,14 @@ import { EditTheatreComponent } from './edit-theatre/edit-theatre.component';
 const routes: Routes = [
   {path:"layout", component:LayoutComponent},
   {path:"dashboard", component:DashboardComponent},
-  {path:"movie-theatres", component:MovieTheatresComponent
-  // ,children: [{ path: 'edit-theatre', component:EditTheatreComponent}]
-  },
+  {path:"movie-theatres", component:MovieTheatresComponent},
   {path:"movies", component:MoviesComponent},
   {path:"movie-timings", component:MovieTimingsComponent},
   {path:"home-page", component:HomePageComponent},
   {path:"users", component:UsersComponent},
   {path:"booking", component:BookingComponent},
   {path:"update-password", component:UpdatePasswordComponent},
-  {path:"edit-theatre", component:EditTheatreComponent},
+  {path:"edit-theatre/:id", component:EditTheatreComponent},
   {path:"", redirectTo:"dashboard", pathMatch:"full"}
 ];
 export { routes }
