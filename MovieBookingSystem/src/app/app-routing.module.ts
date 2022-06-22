@@ -5,7 +5,7 @@ const routes: Routes = [
   {path:"user",loadChildren:()=>import('./user-layout/user-layout.module').then(x=>x.UserLayoutModule)},
   {path:"admin", loadChildren:()=>import('./admin/admin.module').then(x=>x.AdminLayoutModule)},
   {path:"error", component:ErrorComponent},
-  {path:"", redirectTo:"user", pathMatch:"full"},
+  {path:"", redirectTo:"admin", pathMatch:"full"},
   {path:"**", redirectTo:"error", pathMatch:"full"}
 
 ];

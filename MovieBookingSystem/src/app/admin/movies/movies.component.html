@@ -1,1 +1,61 @@
-<p>movies works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 navbar navbar-black">
+            <div class="navbar-brand">
+                <strong>
+                    <h1>Movies List</h1>
+                </strong>
+            </div>
+            <div class="d-flex">
+                <a class="navbar-brand">Admin > Movies List</a>
+            </div>
+        </div>
+    </div>
+    <div class="row middleRow">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Movie Name</th>
+                        <th scope="col">Poster</th>
+                        <th scope="col">Trailer</th>
+                        <th scope="col">Modify</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataArray">
+                        <th scope="row">{{data.id}}</th>
+                        <td>{{data.movieName}}</td>
+                        <td>{{data.poster}}</td>
+                        <td><a [href]="data.trailer">{{data.trailer}}</a></td>
+                        <td>
+                            <button type="button" class="btn btn-info" [routerLink]="['/admin/edit-movie', data.id]">Edit</button>
+                            <button (click)="deleteFunc(data.id)" type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <form class="addMovieForm" [formGroup]="addMovieForm" (ngSubmit)="addMovieFunc()">
+            <div class="col-1 addMovieBorder">
+                <input class="form-control" type="text" placeholder="ID" formControlName="id" />
+            </div>
+            <div class="col-3 addMovieBorder">
+                <input class="form-control" type="text" placeholder="Movie Name" formControlName="movieName" />
+            </div>
+            <div class="col-3 addMovieBorder">
+                <input class="form-control" type="text" placeholder="Poster" formControlName="moviePoster" />
+            </div>
+            <div class="col-3 addMovieBorder">
+                <input class="form-control" type="text" placeholder="youtube trailer link" formControlName="trailer" />
+            </div>
+            <div class="col-2 addMovieBorder">
+                <button type="submit" class="btn btn-success addMovieButton">Add New Movie</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

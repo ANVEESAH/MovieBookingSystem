@@ -14,6 +14,7 @@ import { MovieTimingsComponent } from './movie-timings/movie-timings.component';
 import { MoviesComponent } from './movies/movies.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { UsersComponent } from './users/users.component';
+import { EditMovieComponent } from './edit-movie/edit-movie.component';
 
 const routing:Routes=[
   {path:'', component:LayoutComponent, children : routes},
@@ -32,7 +33,8 @@ const routing:Routes=[
     MovieTimingsComponent,
     MoviesComponent,
     UpdatePasswordComponent,
-    UsersComponent
+    UsersComponent,
+    EditMovieComponent
   ],
   imports: [
     CommonModule,

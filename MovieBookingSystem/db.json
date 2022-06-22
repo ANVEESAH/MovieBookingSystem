@@ -1,21 +1,47 @@
 {
   "movie-theatres": [
     {
-      "theatreName": "Carnival Cinemas",
-      "id": 2
-    },
-    {
-      "theatreName": "Dharam Palace Mall",
-      "id": 3
-    },
-    {
       "id": "1",
       "theatreName": "PVR"
     },
     {
-      "id": 4,
+      "id": "2",
+      "theatreName": "Carnival Cinemas"
+    },
+    {
+      "id": "3",
+      "theatreName": "Dharam Palace Mall"
+    },
+    {
+      "id": "4",
       "theatreName": "SRS Cinema"
     }
   ],
-  "user": []
+  "movies": [
+    {
+      "id": "1",
+      "movieName": "Kashmir File",
+      "trailer": "https://www.youtube.com/watch?v=A179apttY58"
+    },
+    {
+      "id": "2",
+      "movieName": "RRR",
+      "trailer": "https://www.youtube.com/watch?v=xo1P2sQdhC0"
+    },
+    {
+      "id": "3",
+      "movieName": "KGF",
+      "trailer": "https://www.youtube.com/watch?v=-KfsY-qwBS0"
+    },
+    {
+      "id": "4",
+      "movieName": "A Beautiful Mind",
+      "trailer": "https://www.youtube.com/watch?v=aS_d0Ayjw4o"
+    },
+    {
+      "movieName": "The Big Bull",
+      "trailer": "https://www.youtube.com/watch?v=Bw6I-KgCSP4",
+      "id": "5"
+    }
+  ]
 }

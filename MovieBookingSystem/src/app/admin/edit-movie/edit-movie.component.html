@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 navbar navbar-black">
+            <div class="navbar-brand">
+                <strong>
+                    <h1>Edit Movie</h1>
+                </strong>
+            </div>
+            <div class="d-flex">
+                <a class="navbar-brand">Admin > Movie > Edit Movie</a>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="newMovieDataForm" (ngSubmit)="submitNewMovieDataFunc()">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        Old Movie Name:
+                        <input class="form-control" type="text" [value]="data.movieName" disabled />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Old Movie Youtube Trailer Link:
+                        <input class="form-control" type="text" [value]="data.trailer" disabled />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="" alt="[Movie Poster]" />
+                        <p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        Movie Name:
+                        <input class="form-control" type="text" formControlName="movieName" />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Movie Youtube Trailer Link:
+                        <input class="form-control" type="text" formControlName="trailer" />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Movie Poster:
+                        <button type="button" class="btn btn-light">Choose File</button>
+                        No file choosen
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="submit">
+                <!-- <button type="submit" class="btn btn-danger" routerLink="/admin/movie-theatres">Edit movie</button> -->
+                <button type="submit" class="btn btn-danger">Edit movie</button>
+                <p>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- <script>
+    goPlaces(){
+        this.router.navigateByUrl('/users;display=verbose/sammy');
+    }
+</script> -->
