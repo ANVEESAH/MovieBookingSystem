@@ -1,21 +1,71 @@
 {
   "movie-theatres": [
     {
-      "theatreName": "Carnival Cinemas",
-      "id": 2
-    },
-    {
-      "theatreName": "Dharam Palace Mall",
-      "id": 3
-    },
-    {
       "id": "1",
       "theatreName": "PVR"
     },
     {
-      "id": 4,
+      "id": "2",
+      "theatreName": "Carnival Cinemas"
+    },
+    {
+      "id": "3",
+      "theatreName": "Dharam Palace Mall"
+    },
+    {
+      "id": "4",
       "theatreName": "SRS Cinema"
     }
   ],
-  "user": []
+  "movies": [
+    {
+      "movieName": "Kashmir File",
+      "trailer": "https://www.youtube.com/watch?v=A179apttY58",
+      "movieDetails": "Krishna endeavours to uncover the reason behind his parents' brutal killings in Kashmir. He is shocked to uncover a web of lies and conspiracies in connection with the massive genocide.",
+      "movieCast": "Anupam Kher, Mithun Chakraborty, Darshan Kumaar, Pallavi Joshi, Chinmay Mandlekar",
+      "movieFacts": "Stating that his film ‘The Kashmir Files’, which chronicles the sufferings of Kashmiri Pandits forced to flee from the Valley in late 1980s and 1990s, was hundred percent based on facts, filmmaker Vivek Agnihotri today alleged that those who should have highlighted the “genocide” are now trying to run down the film because of personal agenda.  “Some powerful agenda-driven’ foreign media are part of this anti-India, anti-truth and anti-free speech conspiracy. These agenda-driven international media organisations are actually anti-India and are out to malign the image of the country,” Agnihotri said, claiming that they were the ones who forced the Foreign Correspondents Club “to cancel” his press conference scheduled for the day.",
+      "IMDBRating": "8.3",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "movieName": "RRR",
+      "trailer": "https://www.youtube.com/watch?v=xo1P2sQdhC0",
+      "moviePoster": "[location]",
+      "movieDetails": "xyz2",
+      "movieCast": "xyz2",
+      "movieFacts": "xyz2",
+      "IMDBRating": "8.22"
+    },
+    {
+      "id": "3",
+      "movieName": "KGF",
+      "trailer": "https://www.youtube.com/watch?v=-KfsY-qwBS0",
+      "moviePoster": "[location]",
+      "movieDetails": "xyz3",
+      "movieCast": "xyz3",
+      "movieFacts": "xyz3",
+      "IMDBRating": "8.23"
+    },
+    {
+      "id": "4",
+      "movieName": "A Beautiful Mind",
+      "trailer": "https://www.youtube.com/watch?v=aS_d0Ayjw4o",
+      "moviePoster": "[location]",
+      "movieDetails": "xyz4",
+      "movieCast": "xyz4",
+      "movieFacts": "xyz4",
+      "IMDBRating": "8.24"
+    },
+    {
+      "id": "5",
+      "movieName": "The Big Bull",
+      "trailer": "https://www.youtube.com/watch?v=Bw6I-KgCSP4",
+      "moviePoster": "[location]",
+      "movieDetails": "xyz5",
+      "movieCast": "xyz5",
+      "movieFacts": "xyz5",
+      "IMDBRating": "8.25"
+    }
+  ]
 }

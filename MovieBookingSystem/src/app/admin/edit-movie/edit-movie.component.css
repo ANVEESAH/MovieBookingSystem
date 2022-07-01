@@ -1,0 +1,17 @@
+#submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}
+
+.bottomRow {
+    margin-bottom: 1rem;
+}
+/* .container {
+    display: grid;
+    grid-gap: 50px;
+} */

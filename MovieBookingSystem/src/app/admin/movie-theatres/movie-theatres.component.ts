@@ -17,7 +17,6 @@ export class MovieTheatresComponent implements OnInit {
     this._movieTheatresService.GetAllMovieTheatres().subscribe(
       (data) => { this.dataArray = data }
     );
-    // this.products=this.productService.getProducts();
   }
 
   deleteFunc(id: any) {
@@ -31,7 +30,8 @@ export class MovieTheatresComponent implements OnInit {
   addTheatreForm = new FormGroup(
     {
       id: new FormControl(),
-      theatreName: new FormControl()
+      theatreName: new FormControl(),
+      theatreImage: new FormControl()
     }
   )
 
