@@ -12,66 +12,127 @@
         </div>
     </div>
     <form [formGroup]="newMovieDataForm" (ngSubmit)="submitNewMovieDataFunc()">
+        <!-- <form [formGroup]="newMovieDataForm" (ngSubmit)="submitNewMovieDataFunc()" *ngIf="data"> -->
         <div class="row">
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-12">
-                        Old Movie Name:
-                        <input class="form-control" type="text" [value]="data.movieName" disabled />
-                        <p>
-                    </div>
+            <div class="col-12">
+                <p>Movie Name:</p>
+                <input class="form-control" type="text" formControlName="movieName" />
+                <div
+                    *ngIf="newMovieDataForm.get('movieName')?.hasError('required') && (newMovieDataForm.get('movieName')?.dirty||newMovieDataForm.get('movieName')?.touched)">
+                    <div class="alert-danger">Movie name is required</div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        Old Movie Youtube Trailer Link:
-                        <input class="form-control" type="text" [value]="data.trailer" disabled />
-                        <p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <img src="" alt="[Movie Poster]" />
-                        <p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-12">
-                        Movie Name:
-                        <input class="form-control" type="text" formControlName="movieName" />
-                        <p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        Movie Youtube Trailer Link:
-                        <input class="form-control" type="text" formControlName="trailer" />
-                        <p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        Movie Poster:
-                        <button type="button" class="btn btn-light">Choose File</button>
-                        No file choosen
-                        <p>
-                    </div>
-                </div>
+                <p>
             </div>
         </div>
         <div class="row">
-            <div class="col-12" id="submit">
-                <!-- <button type="submit" class="btn btn-danger" routerLink="/admin/movie-theatres">Edit movie</button> -->
-                <button type="submit" class="btn btn-danger">Edit movie</button>
+            <div class="col-12">
+                <p>Movie Youtube Trailer Link:</p>
+                <input class="form-control" type="text" formControlName="trailer" />
+                <div
+                    *ngIf="newMovieDataForm.get('trailer')?.hasError('required') && (newMovieDataForm.get('trailer')?.dirty||newMovieDataForm.get('trailer')?.touched)">
+                    <div class="alert-danger">Trailer is required</div>
+                </div>
+                <div *ngIf="newMovieDataForm.get('trailer')?.hasError('pattern')">
+                    <div class="alert-danger">Please provide a valid URL</div>
+                </div>
                 <p>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                Movie Poster (old):
+                <br>
+                <img src="" alt="[Movie Poster (old)]" />
+                <br>
+            </div>
+            <div class="col-6">
+                Movie Poster (new):
+                <br>
+                <img src="" alt="[Movie Poster (new)]" />
+                <br>
+                <button type="button" class="btn btn-light">Choose Another Poster</button>
+                No file choosen
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Movie Details:</p>
+            </div>
+            <div class="col-12">
+                <textarea rows="6" cols="50" type="text" class="form-control" type="text"
+                    formControlName="movieDetails"></textarea>
+                <div
+                    *ngIf="newMovieDataForm.get('movieDetails')?.hasError('required') && (newMovieDataForm.get('movieDetails')?.dirty||newMovieDataForm.get('movieDetails')?.touched)">
+                    <div class="alert-danger">Movie details are required</div>
+                </div>
+                <!-- <input type="text" class="form-control" type="text" [value]="data.movieDetails" formControlName="movieDetails" /> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Cast:</p>
+            </div>
+            <div class="col-12">
+                <textarea rows="4" cols="50" type="text" class="form-control" type="text"
+                    formControlName="movieCast"></textarea>
+                <div
+                    *ngIf="newMovieDataForm.get('movieCast')?.hasError('required') && (newMovieDataForm.get('movieCast')?.dirty||newMovieDataForm.get('movieCast')?.touched)">
+                    <div class="alert-danger">Movie cast is required</div>
+                </div>
+                <!-- <input type="text" class="form-control" type="text" [value]="data.movieCast" formControlName="movieCast" /> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>Facts:</p>
+            </div>
+            <div class="col-12">
+                <textarea rows="6" cols="50" type="text" class="form-control" type="text"
+                    formControlName="movieFacts"></textarea>
+                <div
+                    *ngIf="newMovieDataForm.get('movieFacts')?.hasError('required') && (newMovieDataForm.get('movieFacts')?.dirty||newMovieDataForm.get('movieFacts')?.touched)">
+                    <div class="alert-danger">Movie facts are required</div>
+                </div>
+                <!-- <input type="text" class="form-control" type="text" [value]="data.movieFacts" formControlName="movieFacts" /> -->
+            </div>
+        </div>
+        <div class="row bottomRow">
+            <div class="col-12">
+                <p>IMDB rating:</p>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" type="text" formControlName="IMDBRating" />
+                <div
+                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('required') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    <div class="alert-danger">IMDB rating is required</div>
+                </div>
+                <div
+                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('max') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    <div class="alert-danger">IMDB rating cannot be greater then 10</div>
+                </div>
+                <div
+                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('pattern') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    <div class="alert-danger">IMDB rating can only be a integer</div>
+                </div>
+            </div>
+            <div class="col-9" id="submit">
+                <button type="submit" class="btn btn-danger">Edit movie</button>
+            </div>
+            <br>
         </div>
     </form>
 </div>
 
-<!-- <script>
-    goPlaces(){
-        this.router.navigateByUrl('/users;display=verbose/sammy');
-    }
-</script> -->
+<script>
+    // goPlaces(){
+    //     this.router.navigateByUrl('/admin/movies');
+    // }
+    // goPlaces() {
+    //     this.router.navigate(['/', 'movies'])
+    //         .then(nav => {
+    //             console.log(nav); // true if navigation is successful
+    //         }, err => {
+    //             console.log(err); // when there's an error
+    //         });
+    // }
+</script>
