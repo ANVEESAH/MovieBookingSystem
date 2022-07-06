@@ -27,7 +27,7 @@
           <tr *ngFor="let data of dataArray">
             <th scope="row">{{data.id}}</th>
             <td>{{data.theatreName}}</td>
-            <td>{{data.image}}</td>
+            <td><img [src]="data.theatreImage"></td>
             <!-- <td><input class="form-check-input" type="checkbox" id="flexCheckDefault"></td> -->
             <td>
               <button type="button" class="btn btn-info" [routerLink]="['/admin/edit-theatre', data.id]">Edit</button>

@@ -25,22 +25,22 @@ export class MoviesComponent implements OnInit {
     );
   }
 
-  addMovieForm = new FormGroup(
-    {
-      id: new FormControl(),
-      movieName: new FormControl(),
-      moviePoster: new FormControl(),
-      trailer: new FormControl()
-    }
-  )
+  // addMovieForm = new FormGroup(
+  //   {
+  //     id: new FormControl(),
+  //     movieName: new FormControl(),
+  //     moviePoster: new FormControl(),
+  //     trailer: new FormControl()
+  //   }
+  // )
 
-  addMovieFunc() {
-    if (this.addMovieForm.valid) {
-      this._moviesService.addMovie(this.addMovieForm.value).subscribe(
-        (data)=>{
-          this.dataArray.push(this.addMovieForm.value);
-        }
-      );
-    }
-  }
+  // addMovieFunc() {
+  //   if (this.addMovieForm.valid) {
+  //     this._moviesService.addMovie(this.addMovieForm.value).subscribe(
+  //       (data)=>{
+  //         this.dataArray.push(this.addMovieForm.value);
+  //       }
+  //     );
+  //   }
+  // }
 }

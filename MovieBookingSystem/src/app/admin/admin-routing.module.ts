@@ -11,6 +11,7 @@ import { UsersComponent } from './users/users.component';
 import { LayoutComponent } from './layout/layout.component';
 import { EditTheatreComponent } from './edit-theatre/edit-theatre.component';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 const routes: Routes = [
   {path:"layout", component:LayoutComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"update-password", component:UpdatePasswordComponent},
   {path:"edit-theatre/:id", component:EditTheatreComponent},
   {path:"edit-movie/:id", component:EditMovieComponent},
+  {path:"add-movie", component:AddMovieComponent},
   {path:"", redirectTo:"dashboard", pathMatch:"full"}
 ];
 export { routes }

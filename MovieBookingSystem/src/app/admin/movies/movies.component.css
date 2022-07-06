@@ -13,8 +13,7 @@
 
 /* bottom row */
 button {
-    margin-left: 6px;
-    margin-right: 6px;
+    margin: 6px 6px 6px 6px;
 }
 
 /* .bottomButtons {
@@ -37,4 +36,9 @@ button {
 
 .addMovieButton{
     margin: 0px 0px;
+}
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
 }

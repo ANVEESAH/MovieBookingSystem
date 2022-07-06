@@ -3,21 +3,30 @@
         <div class="col-12 navbar navbar-black">
             <div class="navbar-brand">
                 <strong>
-                    <h1>Edit Movie</h1>
+                    <h1>Add Movie</h1>
                 </strong>
             </div>
             <div class="d-flex">
-                <a class="navbar-brand">Admin > Movie > Edit Movie</a>
+                <a class="navbar-brand">Admin > Movie > Add Movie</a>
             </div>
         </div>
     </div>
-    <form [formGroup]="newMovieDataForm" *ngIf="movieData">
+    <form [formGroup]="editMovieDataForm">
         <div class="row">
-            <div class="col-12">
+            <div class="col-2">
+                <p>Id:</p>
+                <input class="form-control" type="text" formControlName="movieName" />
+                <div
+                    *ngIf="editMovieDataForm.get('id')?.hasError('required') && (editMovieDataForm.get('id')?.dirty||editMovieDataForm.get('id')?.touched)">
+                    <div class="alert-danger">Movie id is required</div>
+                </div>
+                <p>
+            </div>
+            <div class="col-10">
                 <p>Movie Name:</p>
                 <input class="form-control" type="text" formControlName="movieName" />
                 <div
-                    *ngIf="newMovieDataForm.get('movieName')?.hasError('required') && (newMovieDataForm.get('movieName')?.dirty||newMovieDataForm.get('movieName')?.touched)">
+                    *ngIf="editMovieDataForm.get('movieName')?.hasError('required') && (editMovieDataForm.get('movieName')?.dirty||editMovieDataForm.get('movieName')?.touched)">
                     <div class="alert-danger">Movie name is required</div>
                 </div>
                 <p>
@@ -28,35 +37,18 @@
                 <p>Movie Youtube Trailer Link:</p>
                 <input class="form-control" type="text" formControlName="trailer" />
                 <div
-                    *ngIf="newMovieDataForm.get('trailer')?.hasError('required') && (newMovieDataForm.get('trailer')?.dirty||newMovieDataForm.get('trailer')?.touched)">
+                    *ngIf="editMovieDataForm.get('trailer')?.hasError('required') && (editMovieDataForm.get('trailer')?.dirty||editMovieDataForm.get('trailer')?.touched)">
                     <div class="alert-danger">Trailer is required</div>
                 </div>
-                <div *ngIf="newMovieDataForm.get('trailer')?.hasError('pattern')">
+                <div *ngIf="editMovieDataForm.get('trailer')?.hasError('pattern')">
                     <div class="alert-danger">Please provide a valid URL</div>
                 </div>
                 <p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                Movie Poster (old):
-                <br>
-                <img [src]="movieData.moviePoster" alt="[Movie Poster (old)]" />
-                <br>
-            </div>
-            <div class="col-6">
+            <div class="col-12">
                 Movie Poster (new):
                 <br>
-                <input type="file" formControlName="moviePoster" (change)="onChange($event)" #fileUpload>
-                <div class="container text-center jumbotron" *ngIf="shortLink">
-                    <h2> Visit Here</h2>
-                    <a [href]="shortLink">{{shortLink}}</a>
-                </div>
-
-                <!--Flag variable is used here-->
-                <div class="container" *ngIf="loading">
-                    <h3>Loading ...</h3>
-                </div>
+                <input type="file" formControlName="moviePoster" (change)="onFileSelect($event)" #fileUpload>
 
                 <!-- <div class="file-upload">
                     {{fileName || "No file uploaded yet."}}
@@ -75,7 +67,7 @@
                 <textarea rows="6" cols="50" type="text" class="form-control" type="text"
                     formControlName="movieDetails"></textarea>
                 <div
-                    *ngIf="newMovieDataForm.get('movieDetails')?.hasError('required') && (newMovieDataForm.get('movieDetails')?.dirty||newMovieDataForm.get('movieDetails')?.touched)">
+                    *ngIf="editMovieDataForm.get('movieDetails')?.hasError('required') && (editMovieDataForm.get('movieDetails')?.dirty||editMovieDataForm.get('movieDetails')?.touched)">
                     <div class="alert-danger">Movie details are required</div>
                 </div>
             </div>
@@ -88,7 +80,7 @@
                 <textarea rows="4" cols="50" type="text" class="form-control" type="text"
                     formControlName="movieCast"></textarea>
                 <div
-                    *ngIf="newMovieDataForm.get('movieCast')?.hasError('required') && (newMovieDataForm.get('movieCast')?.dirty||newMovieDataForm.get('movieCast')?.touched)">
+                    *ngIf="editMovieDataForm.get('movieCast')?.hasError('required') && (editMovieDataForm.get('movieCast')?.dirty||editMovieDataForm.get('movieCast')?.touched)">
                     <div class="alert-danger">Movie cast is required</div>
                 </div>
             </div>
@@ -101,7 +93,7 @@
                 <textarea rows="6" cols="50" type="text" class="form-control" type="text"
                     formControlName="movieFacts"></textarea>
                 <div
-                    *ngIf="newMovieDataForm.get('movieFacts')?.hasError('required') && (newMovieDataForm.get('movieFacts')?.dirty||newMovieDataForm.get('movieFacts')?.touched)">
+                    *ngIf="editMovieDataForm.get('movieFacts')?.hasError('required') && (editMovieDataForm.get('movieFacts')?.dirty||editMovieDataForm.get('movieFacts')?.touched)">
                     <div class="alert-danger">Movie facts are required</div>
                 </div>
             </div>
@@ -113,20 +105,20 @@
             <div class="col-3">
                 <input type="text" class="form-control" type="text" formControlName="IMDBRating" />
                 <div
-                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('required') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    *ngIf="editMovieDataForm.get('IMDBRating')?.hasError('required') && (editMovieDataForm.get('IMDBRating')?.dirty||editMovieDataForm.get('IMDBRating')?.touched)">
                     <div class="alert-danger">IMDB rating is required</div>
                 </div>
                 <div
-                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('max') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    *ngIf="editMovieDataForm.get('IMDBRating')?.hasError('max')">
                     <div class="alert-danger">IMDB rating cannot be greater then 10</div>
                 </div>
                 <div
-                    *ngIf="newMovieDataForm.get('IMDBRating')?.hasError('pattern') && (newMovieDataForm.get('IMDBRating')?.dirty||newMovieDataForm.get('IMDBRating')?.touched)">
+                    *ngIf="editMovieDataForm.get('IMDBRating')?.hasError('pattern')">
                     <div class="alert-danger">IMDB rating can only be a integer</div>
                 </div>
             </div>
             <div class="col-9" id="submit">
-                <button type="button" class="btn btn-danger" (click)="GotoMovies()">Edit movie</button>
+                <button type="button" class="btn btn-danger" (click)="GotoMovies()">Add movie</button>
             </div>
             <br>
         </div>

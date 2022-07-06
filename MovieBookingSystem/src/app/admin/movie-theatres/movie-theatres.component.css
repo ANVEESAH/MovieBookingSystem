@@ -38,3 +38,8 @@ button {
 .addTheatreButton{
     margin: 0px 0px;
 }
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
+}
