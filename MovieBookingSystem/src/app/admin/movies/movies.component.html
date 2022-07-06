@@ -27,7 +27,7 @@
                     <tr *ngFor="let data of dataArray">
                         <th scope="row">{{data.id}}</th>
                         <td>{{data.movieName}}</td>
-                        <td>{{data.poster}}</td>
+                        <td><img [src]="data.moviePoster" alt="[Movie Poster]" /></td>
                         <td><a [href]="data.trailer">{{data.trailer}}</a></td>
                         <td>
                             <button type="button" class="btn btn-info" [routerLink]="['/admin/edit-movie', data.id]">Edit</button>
@@ -39,8 +39,10 @@
         </div>
     </div>
     <div class="row">
-        <form class="addMovieForm" [formGroup]="addMovieForm" (ngSubmit)="addMovieFunc()">
-            <div class="col-1 addMovieBorder">
+        <!-- <form class="addMovieForm" [formGroup]="addMovieForm" (ngSubmit)="addMovieFunc()"> -->
+        <div class="col-10 addMovieBorder">
+        </div>
+        <!-- <div class="col-1 addMovieBorder">
                 <input class="form-control" type="text" placeholder="ID" formControlName="id" />
             </div>
             <div class="col-3 addMovieBorder">
@@ -51,10 +53,11 @@
             </div>
             <div class="col-3 addMovieBorder">
                 <input class="form-control" type="text" placeholder="youtube trailer link" formControlName="trailer" />
-            </div>
-            <div class="col-2 addMovieBorder">
-                <button type="submit" class="btn btn-success addMovieButton">Add New Movie</button>
-            </div>
-        </form>
+            </div> -->
+        <!-- <div class="col-2 addMovieBorder"> -->
+        <div class="col-2">
+            <button type="submit" class="btn btn-success addMovieButton" [routerLink]="['/admin/add-movie']">Add New Movie</button>
+        </div>
+        <!-- </form> -->
     </div>
 </div>

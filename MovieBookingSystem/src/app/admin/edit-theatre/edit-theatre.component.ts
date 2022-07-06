@@ -24,9 +24,15 @@ export class EditTheatreComponent implements OnInit {
     theatreName: new FormControl()
   })
 
+  GotoTheatres() {
+    this.submitNewTheatreDataFunc();
+    this._router.navigateByUrl('/admin/movie-theatres');
+  }
+
   submitNewTheatreDataFunc(){
     if(this.newTheatreDataForm.valid){
       this._movieTheatresService.UpdateTheatreData(this.id, this.newTheatreDataForm.value).subscribe()
     }
   }
+  
 }
