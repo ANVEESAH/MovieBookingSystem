@@ -1,4 +1,5 @@
 {
+
   "posts": [
     {
       "id": 1,
@@ -20,4 +21,88 @@
     "Email": ""
 
   }]
+  "movie-theatres": [
+    {
+      "id": "1",
+      "theatreName": "PVR",
+      "theatreImage": "assets\\Images\\admin\\movieTheatres\\PVR.jpg"
+    },
+    {
+      "id": "2",
+      "theatreName": "Carnival Cinemas",
+      "theatreImage": "assets\\Images\\admin\\movieTheatres\\carnivalCinemas.jpg"
+    },
+    {
+      "theatreName": "Wave Cinemas",
+      "id": "3",
+      "theatreImage": "assets\\Images\\admin\\movieTheatres\\waveCinemas.jpg"
+    },
+    {
+      "theatreName": "SRS Cinema",
+      "id": "4",
+      "theatreImage": "assets\\Images\\admin\\movieTheatres\\SRS.jpg"
+    }
+  ],
+  "movies": [
+    {
+      "movieName": "Kashmir File",
+      "trailer": "https://www.youtube.com/watch?v=A179apttY58",
+      "movieDetails": "Krishna endeavours to uncover the reason behind his parents' brutal killings in Kashmir. He is shocked to uncover a web of lies and conspiracies in connection with the massive genocide.",
+      "movieCast": "Anupam Kher, Mithun Chakraborty, Darshan Kumaar, Pallavi Joshi, Chinmay Mandlekar",
+      "movieFacts": "Stating that his film ‘The Kashmir Files’, which chronicles the sufferings of Kashmiri Pandits forced to flee from the Valley in late 1980s and 1990s, was hundred percent based on facts, filmmaker Vivek Agnihotri today alleged that those who should have highlighted the “genocide” are now trying to run down the film because of personal agenda.  “Some powerful agenda-driven’ foreign media are part of this anti-India, anti-truth and anti-free speech conspiracy. These agenda-driven international media organisations are actually anti-India and are out to malign the image of the country,” Agnihotri said, claiming that they were the ones who forced the Foreign Correspondents Club “to cancel” his press conference scheduled for the day.",
+      "IMDBRating": "9.3",
+      "id": "1",
+      "moviePoster": "assets\\Images\\admin\\adminMovies\\kashmirFiles.jpg"
+    },
+    {
+      "id": "2",
+      "movieName": "RRR",
+      "trailer": "https://www.youtube.com/watch?v=xo1P2sQdhC0",
+      "moviePoster": "assets\\Images\\admin\\adminMovies\\RRR.jpg",
+      "movieDetails": "xyz2",
+      "movieCast": "xyz2",
+      "movieFacts": "xyz2",
+      "IMDBRating": "8.22"
+    },
+    {
+      "id": "3",
+      "movieName": "KGF",
+      "trailer": "https://www.youtube.com/watch?v=-KfsY-qwBS0",
+      "moviePoster": "assets\\Images\\admin\\adminMovies\\KGF.jpg",
+      "movieDetails": "xyz3",
+      "movieCast": "xyz3",
+      "movieFacts": "xyz3",
+      "IMDBRating": "8.23"
+    },
+    {
+      "id": "4",
+      "movieName": "A Beautiful Mind",
+      "trailer": "https://www.youtube.com/watch?v=aS_d0Ayjw4o",
+      "moviePoster": "assets\\Images\\admin\\adminMovies\\aBeautifulMind.jpg",
+      "movieDetails": "xyz4",
+      "movieCast": "xyz4",
+      "movieFacts": "xyz4",
+      "IMDBRating": "8.24"
+    },
+    {
+      "id": "5",
+      "movieName": "The Big Bull",
+      "trailer": "https://www.youtube.com/watch?v=Bw6I-KgCSP4",
+      "moviePoster": "assets\\Images\\admin\\adminMovies\\theBigBull.jpg",
+      "movieDetails": "xyz5",
+      "movieCast": "xyz5",
+      "movieFacts": "xyz5",
+      "IMDBRating": "8.25"
+    },
+    {
+      "movieName": "The Mummy",
+      "trailer": "https://www.youtube.com/watch?v=IjHgzkQM2Sg",
+      "movieDetails": "The Mummy is a 1999 American fantasy action-adventure film written and directed by Stephen Sommers. It is a remake of the 1932 film of the same name, starring Brendan Fraser, Rachel Weisz, John Hannah, Kevin J. O'Connor, and Arnold Vosloo in the title role as the reanimated mummy.",
+      "movieCast": "Brendan Fraser, Rachel Weisz, John Hannah, Arnold Vosloo, Kevin J. O'Connor",
+      "movieFacts": "Universal originally planned on rebooting \"The Mummy\" as a low-budget horror film in the early 1990's. Clive Barker was attached to direct, and the film would have focused on a modern-day museum curator attempting to raise an army of undead mummies. 2. Tom Cruise was originally offered the lead role but turned it down.",
+      "IMDBRating": "7.1",
+      "moviePoster": "assets\\Images\\admin\\movieTheatres\\theMummy.jpg",
+      "id": "6"
+    }
+  ]
 }

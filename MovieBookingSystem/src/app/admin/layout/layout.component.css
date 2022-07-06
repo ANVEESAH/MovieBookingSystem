@@ -17,9 +17,14 @@ body { min-height: 100%; }
     display:flex;
     align-items: center;
     justify-content: center;
+    color: lightblue
 }
 
 /* background color */
+a{
+    color: lightblue;
+    text-decoration: none;
+}
 .left{
     background-color: #2b5682;
     color: white;
@@ -33,7 +38,11 @@ body { min-height: 100%; }
     background-color: #122d47;
 }
 
-.navbarTab:active, .navbarTab:focus{
+.active, .navbarTab:active{
+    background-color: #0c1d2e;
+    font-weight:bool;
+}
+.hignlight{
     background-color: #0c1d2e;
 }
 

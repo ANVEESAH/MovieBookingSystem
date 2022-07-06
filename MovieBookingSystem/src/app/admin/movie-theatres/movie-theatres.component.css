@@ -1,0 +1,45 @@
+/* middle row */
+.thead-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+
+.middleRow {
+    height: 410px;
+    float: top;
+    overflow-y: auto;
+}
+
+/* bottom row */
+button {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+/* .bottomButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 0;
+} */
+
+.addTheatreForm {
+    display: flex;
+}
+
+.addTheatreBorder {
+    border: 1px solid whitesmoke;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    /* float:left; */
+}
+
+.addTheatreButton{
+    margin: 0px 0px;
+}
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
+}

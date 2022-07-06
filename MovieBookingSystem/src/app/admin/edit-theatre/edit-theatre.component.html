@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 navbar navbar-black">
+            <div class="navbar-brand">
+                <strong>
+                    <h1>Edit Theatre</h1>
+                </strong>
+            </div>
+            <div class="d-flex">
+                <a class="navbar-brand">Admin > Theatre > Edit Theatre</a>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="newTheatreDataForm" (ngSubmit)="submitNewTheatreDataFunc()">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        Old Theatre Name:
+                        <input class="form-control" type="text" [value]="data.theatreName" disabled />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <img src="" alt="[Theatre Image]"/>
+                        <p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">
+                        Theatre Name:
+                        <input class="form-control" type="text" formControlName = "theatreName" />
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Theatre Image:
+                        <button type="button" class="btn btn-light">Choose File</button>
+                        No file choosen
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="submit">
+                <!-- <button type="submit" class="btn btn-danger" routerLink="/admin/movie-theatres">Edit theatre</button> -->
+                <button type="submit" class="btn btn-danger" (click)="GotoTheatres()">Edit theatre</button>
+                <p>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- <router-outlet></router-outlet> -->

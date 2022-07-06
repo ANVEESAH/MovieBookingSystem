@@ -8,9 +8,7 @@ import { UserRoutingModule } from './user-routing.module';
 
 @NgModule({
   declarations: [
-  
-  
-   
+
   ],
   imports: [
     CommonModule,

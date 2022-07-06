@@ -5,17 +5,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddshowwComponent } from './admin/movie-timings/addshoww/addshoww.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-       
+    AddshowwComponent
   ],
   imports: [
     BrowserModule,
+
     AppRoutingModule,ReactiveFormsModule,HttpClientModule
+
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

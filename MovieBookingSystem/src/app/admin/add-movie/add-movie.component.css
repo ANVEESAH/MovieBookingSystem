@@ -1,0 +1,27 @@
+#submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.file-input {
+    display: none;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}
+
+img {
+    max-width: 14rem;
+    max-height: 14rem;
+}
+
+.bottomRow {
+    margin-bottom: 1rem;
+}
+
+/* .container {
+    display: grid;
+    grid-gap: 50px;
+} */

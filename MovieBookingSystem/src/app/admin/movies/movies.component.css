@@ -1,0 +1,44 @@
+/* middle row */
+.thead-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+
+.middleRow {
+    height: 410px;
+    float: top;
+    overflow-y: auto;
+}
+
+/* bottom row */
+button {
+    margin: 6px 6px 6px 6px;
+}
+
+/* .bottomButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 0;
+} */
+
+.addMovieForm {
+    display: flex;
+}
+
+.addMovieBorder {
+    border: 1px solid whitesmoke;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    /* float:left; */
+}
+
+.addMovieButton{
+    margin: 0px 0px;
+}
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
+}
