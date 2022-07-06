@@ -1,4 +1,5 @@
 <section class="h-100 h-custom gradient-custom-2">
+  <form [formGroup]="loginform" (ngSubmit)="save()">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -21,7 +22,7 @@
                     <div class="col-md-6 mb-4 pb-2">
 
                       <div class="form-outline">
-                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
+                        <input type="text" id="form3Examplev2" formControlName="first_name" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplev2"><h6>First name*</h6></label>
                       </div>
 
@@ -29,7 +30,7 @@
                     <div class="col-md-6 mb-4 pb-2">
 
                       <div class="form-outline">
-                        <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
+                        <input type="text" id="form3Examplev3" formControlName="last_name" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplev3"><h6>Last name*</h6></label>
                       </div>
 
@@ -63,11 +64,11 @@
 
                   <div class="mb-4 pb-2">
                     <div class="form-outline">
-                      <input type="email" id="form3Examplev4" class="form-control form-control-lg" />
+                      <input type="email" id="form3Examplev4" formControlName="email" class="form-control form-control-lg" />
                       <label class="form-label" for="form3Examplev4"><h6> Email Address*</h6></label>
                     </div>
                     <div class="form-outline">
-                      <input type="email" id="form3Examplev4" class="form-control form-control-lg" />
+                      <input type="email" id="form3Examplev4"  class="form-control form-control-lg" />
                       <label class="form-label" for="form3Examplev4"><h6>Confim Email Address*</h6></label>
                     </div>
                   </div>
@@ -76,13 +77,14 @@
                     <div class=" mb-4 pb-2 mb-md-0 pb-md-0">
 
                       <div class="form-outline">
-                        <input type="password" id="form3Examplev4" class="form-control form-control-lg" />
+                        <input type="password" id="form3Examplev4" formControlName="password"class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplev4"><h6> Password*</h6></label>
                       </div>
                       <div class="form-outline">
                         <input type="password" id="form3Examplev4" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Examplev4"><h6> Cofirm password*</h6></label>
                       </div>
+                      <a routerLink="/signin" style="color: blue; margin-top: 10px;" >Already a user? Click here</a>
 
                     </div>
                     <div class="col-md-6">
@@ -94,69 +96,7 @@
 
                 </div>
               </div>
-              <div class="col-lg-6 bg-indigo text-white">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-5">Contact Details</h3>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea2"><h6>Street Number</h6></label>
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea3"><h6>Address*</h6></label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea4" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea4"><h6>Pin code*</h6></label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-7 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea5"><h6>City</h6></label>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-white">
-                      <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea6"><h6>District</h6></label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-5 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea7"><h6>Alternate Mobile Number</h6></label>
-                      </div>
-
-                    </div>
-                    <div class="col-md-7 mb-4 pb-2">
-
-                      <div class="form-outline form-white">
-                        <input type="text" id="form3Examplea8" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Examplea8"><h6>Mobile Number*</h6></label>
-                      </div>
-
-                    </div>
-                  </div>
-
+             
                   
 
                   <div class="form-check d-flex justify-content-start mb-4 pb-3">
@@ -167,15 +107,15 @@
                     </label>
                   </div>
 
-                  <button type="button" class="btn btn-light btn-lg"
+                  <button type="submit" class="btn btn-light btn-lg"
                     data-mdb-ripple-color="dark">Register</button>
+                    
 
                 </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</form>
 </section>

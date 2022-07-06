@@ -3,6 +3,7 @@ import { BookTicketComponent } from '../user/book-ticket/book-ticket.component';
 import { ContentComponent } from '../user/content/content.component';
 import { ErrorComponent } from '../user/error/error.component';
 import { HomeComponent } from '../user/home/home.component';
+
 import { SigninComponent } from '../user/signin/signin.component';
 import { StepperComponent } from '../user/stepper/stepper.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'content',component: ContentComponent},
   {path:'error',component: ErrorComponent},
   {path:'signin',component: SigninComponent},
+  
   
 ];
 

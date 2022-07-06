@@ -1,0 +1,173 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagarbhadauria094@gmail.com",
+      "password": "Sagar@133",
+      "id": 2
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagarbhadauria094@gmail.com",
+      "password": "Sagar@133",
+      "id": 3
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 4
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 5
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 6
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 7
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 8
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 9
+    },
+    {
+      "first_name": null,
+      "last_name": null,
+      "email": null,
+      "password": null,
+      "id": 10
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagarbhadauria094@gmail.com",
+      "password": "Sagar@133",
+      "id": 11
+    },
+    {
+      "first_name": "bikal",
+      "last_name": "chapain",
+      "email": "bkal@examonline.in",
+      "password": "bikal",
+      "id": 12
+    },
+    {
+      "first_name": "bikal",
+      "last_name": "chapain",
+      "email": "bkal@examonline.in",
+      "password": "bikal",
+      "id": 13
+    },
+    {
+      "first_name": "bikal",
+      "last_name": "chapain",
+      "email": "bkal@examonline.in",
+      "password": "bikal",
+      "id": 14
+    },
+    {
+      "first_name": "saqib",
+      "last_name": "aslam",
+      "email": "saqibaslam@examonline.com",
+      "password": "saqib",
+      "id": 15
+    },
+    {
+      "first_name": "saqib",
+      "last_name": "aslam",
+      "email": "saqibaslam@examonline.com",
+      "password": "saqib",
+      "id": 16
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagar@gmail.com",
+      "password": "sagar",
+      "id": 17
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "b jabvsj",
+      "email": "sagarbhadauria094@gmail.com",
+      "password": "sagar",
+      "id": 18
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagar@gmail.com",
+      "password": "sagar",
+      "id": 19
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhdaurou",
+      "email": "sagar@gmail.com",
+      "password": "SAGAR",
+      "id": 20
+    },
+    {
+      "first_name": "ghfj",
+      "last_name": "jyfv",
+      "email": "sagar@gmail.com",
+      "password": "sagar",
+      "id": 21
+    },
+    {
+      "first_name": "sagar",
+      "last_name": "bhadauria",
+      "email": "sagarb@gmail.com",
+      "password": "sagarb",
+      "id": 22
+    },
+    {
+      "first_name": "prakhar",
+      "last_name": "singh",
+      "email": "pps@gmail.com",
+      "password": "123",
+      "id": 23
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
