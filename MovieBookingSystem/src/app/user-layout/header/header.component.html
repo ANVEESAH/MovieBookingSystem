@@ -36,13 +36,13 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button></form>
           
-        <p>
+        <p *ngIf="loggedInUser==null">
             
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseExample">
               SignUp
             </button>
           </p>
-        <div  class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div  class="collapse collapse-horizontal" id="collapseWidthExample" *ngIf="loggedInUser==null">
           
           <form class="d-flex">
           <button class="btn btn-outline-danger" value="signin" ><a routerLink="signin">signin</a></button>
@@ -53,6 +53,11 @@
       </div>
       
     </div>
+    <div class="btn btn-outline-dark" *ngIf="loggedInUser!=null">WELCOME USER {{loggedInUser}}
+      <button class="btn btn-outline-danger" (click)="logout()">Logout</button> 
+    </div>
+    
+
     </nav>
  
 <router-outlet></router-outlet>
